@@ -1,4 +1,4 @@
-# LIQ
+﻿# LIQ
 
 ### Multi-Tier Educational Performance Intelligence & Academic Analytics Platform
 
