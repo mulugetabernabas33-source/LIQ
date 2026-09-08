@@ -29,7 +29,7 @@
   - [5. Kifle Ketema / Subcity Dashboard](#5-kifle-ketema--subcity-dashboard)
   - [6. Addis Ababa City Command Center](#6-addis-ababa-city-command-center)
 - [Analytics & Diagnostic Intelligence](#analytics--diagnostic-intelligence)
-- [Comparative Matrix: Traditional Systems vs. LIQ](#comparative-matrix-traditional-systems-vs-liq)
+- [Traditional Systems vs. LIQ](#traditional-systems-vs-liq)
 - [System Architecture](#system-architecture)
 - [Security, Privacy & Data Handling](#security-privacy--data-handling)
 - [Technology Stack](#technology-stack)
@@ -44,11 +44,11 @@
 
 ## Overview
 
-In many developing educational ecosystems, student assessment data remains trapped in paper markbooks, unlinked spreadsheets, and isolated administrative offices. This fragmentation causes reporting delays of months, leaving teachers, parents, school leaders, and municipal policymakers without the timely data needed to intervene before academic failure occurs.
+In many educational ecosystems, student assessment data remains isolated in paper gradebooks, unlinked spreadsheets, and decentralized administrative offices. This structural fragmentation creates reporting delays of weeks or months, preventing teachers, school leadership, and municipal authorities from identifying academic vulnerabilities before high-stakes examinations.
 
-**LIQ** solves this systemic challenge through a unified software architecture combining two purpose-built environments:
-1. **Flet (Flutter UI Engine) Application:** A cross-platform desktop and web workspace for day-to-day operational workflows, secure authentication, multi-component grade recording, attendance tracking, and individual progress visualization.
-2. **Streamlit & Plotly Macro Analytics Suite:** High-performance analytical dashboards providing multi-level aggregation, institutional benchmarking, statistical variance analysis, and multi-dimensional heatmaps across schools, districts (Weredas), subcities (Kifle Ketemas), and municipal authorities (Addis Ababa).
+**LIQ** unifies educational performance monitoring through an integrated, multi-tier software system composed of two complementary presentation environments:
+1. **Flet (Flutter Engine) Client Application:** A cross-platform desktop and web workspace providing secure authentication, role-based workflows, 5-component continuous markbook recording, attendance tracking, and individual student progress analytics.
+2. **Streamlit & Plotly Macro Analytics Suite:** A high-throughput analytical suite providing executive dashboards, institutional benchmarking, statistical variance analysis, and multi-dimensional heatmaps across schools, districts (Weredas), subcities (Kifle Ketemas), and municipal authorities (Addis Ababa).
 
 ---
 
@@ -63,13 +63,13 @@ In many developing educational ecosystems, student assessment data remains trapp
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-Modern educational institutions and administrative bodies face critical operational bottlenecks:
+Modern educational institutions and administrative bodies face persistent operational hurdles:
 
-* **Severe Information Latency:** Academic trends, failing grades, and chronic absenteeism are often identified only at the end of a semester or academic year when remedial intervention is no longer feasible.
-* **Lack of Granular Progress Visibility:** Parents receive summary report cards without visibility into individual continuous-assessment components (e.g., worksheets, quizzes, midterm exams, projects).
-* **Subject & Cohort Blindspots:** School administrators struggle to pinpoint underperforming sections or curriculum subjects due to manual, aggregated record-keeping.
-* **Inter-Institutional Disparities:** District and regional educational supervisors lack standardized, comparable data to evaluate school performance, identify resource deficits, or reward pedagogical excellence.
-* **Security & Verification Deficits:** Traditional paper logs and unprotected spreadsheets risk data loss, unauthorized alterations, and privacy exposure of sensitive student records.
+* **High Information Latency:** Critical learning gaps and attendance drops are typically identified only at the conclusion of a semester or academic term, making timely remedial action difficult.
+* **Lack of Granular Component Visibility:** Parents receive summary scores without visibility into individual continuous-assessment components (worksheets, quizzes, midterm exams, projects).
+* **Subject & Cohort Blindspots:** School administrators lack real-time tools to detect specific subject-level disparities or identify sections falling behind curriculum milestones.
+* **Inter-School & Regional Disparities:** District supervisors and regional education officers lack standardized, comparative data to evaluate school performance, identify resource deficits, or share pedagogical best practices.
+* **Data Security & Privacy Vulnerabilities:** Traditional paper registers and unprotected spreadsheets risk data loss, tampering, and unauthorized disclosure of confidential student records.
 
 ---
 
@@ -84,25 +84,25 @@ Modern educational institutions and administrative bodies face critical operatio
 └──────────────────────────────────────────────────────────────────┘
 ```
 
-LIQ replaces fragmented, manual records with a unified, transparent data continuum:
+LIQ replaces fragmented, manual workflows with an integrated, transparent digital continuum:
 
-* **5-Component Continuous Assessment:** Standardized capture across continuous coursework (Worksheets /10, Tests /10, Assignments /10, Midterms /30, and Finals /40).
-* **Multi-Tier Hierarchical Access:** Granular, role-tailored dashboards providing appropriate operational detail at every level of governance.
-* **Automated Early Warning Signals:** Built-in heuristics instantly highlight students, classes, or districts scoring below minimum competency thresholds (<60%).
-* **Institutional Benchmarking & Heatmaps:** Visual comparison tools enable district leaders to inspect subject-level mastery patterns across dozens of schools and regional zones.
-* **Integrated Cryptographic Security:** Cryptographic password hashing (Bcrypt) and symmetric PII encryption (Fernet AES-128) safeguard student identities and audit logs.
+* **5-Component Continuous Assessment:** Captures structured continuous coursework (Worksheets /10, Tests /10, Assignments /10, Midterms /30, and Finals /40) with automated validation.
+* **Multi-Tier Role-Based Access:** Delivers dedicated, scoped dashboards tailored to parents, teachers, principals, district officers, subcity supervisors, and municipal directors.
+* **Automated Early Warning Signals:** Algorithmic heuristics immediately flag students, classes, or districts scoring below passing thresholds (<60%).
+* **Institutional Benchmarking & Heatmaps:** Visual matrices enable supervisors to inspect subject-level mastery patterns across schools and administrative zones.
+* **Cryptographic Safeguards:** Employs Bcrypt password hashing and Fernet AES-128 symmetric encryption to protect credentials, student identifiers, and audit logs.
 
 ---
 
 ## System Hierarchy & Access Architecture
 
-LIQ mirrors the real-world governance structure of metropolitan school systems, enforcing scoped data access at each level:
+LIQ mirrors the real-world operational hierarchy of municipal educational systems, enforcing strict role-based access scopes at each governance level:
 
 | Governance Level | Primary Role | Access Scope | Operational Purpose |
 | :--- | :--- | :--- | :--- |
-| **Parent / Guardian** | Parent | Individual Student Record | Track child's 5-component scores, longitudinal trends, and teacher notes |
+| **Parent / Guardian** | Parent | Individual Student Record | Track child's 5-component scores, quarterly trends, and teacher notes |
 | **Classroom Staff** | Teacher | Assigned Section / Grade | Continuous markbook entry, attendance recording, top-student recognition |
-| **School Leadership** | School Administrator | School-Wide (Grades 9–12) | Stream tracking (Natural vs. Social), section rankings, department gaps |
+| **School Leadership** | School Administrator | School-Wide (Grades 9–12) | Stream tracking (Natural vs. Social), section rankings, subject variance |
 | **Wereda Administration** | District Education Officer | Multi-School District | Cross-school rankings, institutional KPI heatmaps, variance monitoring |
 | **Subcity (Kifle Ketema)** | Regional Supervisor | Regional Weredas | Inter-wereda comparison, pass vs. at-risk ratios, subject-level regional matrix |
 | **Municipal Bureau** | City Educational Leader | All 11 Subcities & 99 Weredas | Capital-wide intelligence, executive priority alerts, macro policy analysis |
@@ -127,13 +127,13 @@ graph TD
 
 ## Core Capabilities
 
-* **Standardized 5-Component Continuous Grading:** Enforces balanced evaluation with automatic input validation and sum aggregation.
-* **Attendance Tracking & Absenteeism Monitoring:** Captures student attendance percentages alongside academic marks to identify correlation with performance.
-* **Multi-Quarter Longitudinal Diagnostics:** Tracks student score trajectories across Quarter 1, Quarter 2, Quarter 3, and Quarter 4.
-* **Statistical Performance Spread:** Computes score dispersion (max - min) and sample variance ($\sigma^2$) to detect learning inequality within cohorts.
-* **Dynamic Student & Section Rankings:** Automatically determines top performers by semester and full academic year.
-* **Academic Stream Separation:** Specialized analytical segregation for General Secondary (Grades 9–10) and Preparatory tracks (Grade 11 & 12 Natural Science vs. Social Science).
-* **Multi-Dimensional Heatmaps:** Renders interactive $N 	imes M$ matrix visualizations mapping geographic divisions directly against curriculum disciplines.
+* **Standardized 5-Component Continuous Grading:** Enforces balanced assessment weighting with real-time input validation and total score computation.
+* **Attendance Tracking & Correlation:** Records student attendance percentages alongside academic marks to assess engagement impact.
+* **Longitudinal Progress Tracking:** Visualizes quarter-by-quarter score trajectories across Q1, Q2, Q3, and Q4.
+* **Statistical Performance Spread:** Computes score dispersion (max - min) and sample variance ($\sigma^2$) to evaluate learning equity within cohorts.
+* **Dynamic Student & Section Rankings:** Computes top performers for 1st Semester, 2nd Semester, and Full Year alongside class-wide ranking matrices.
+* **Academic Stream Separation:** Dedicated analytical segregation for General Secondary (Grades 9–10) and Preparatory tracks (Grade 11 & 12 Natural Science vs. Social Science).
+* **Multi-Dimensional Heatmaps:** Renders interactive matrix visualizations mapping geographic divisions directly against curriculum subjects.
 
 ---
 
@@ -143,75 +143,75 @@ graph TD
 
 ### Main LIQ Welcome & Launch Portal
 
-The LIQ application opens with a clean, student-centered interface designed for ease of use across teachers, administrators, and parents.
+The LIQ application opens with a clean, accessible interface designed for educators, school leaders, and families.
 
-#### Welcome Showcase
-An interactive landing screen greeting users and emphasizing educational growth.
+#### Welcome Interface
+Interactive showcase introducing the platform.
 
-![LIQ Landing & Student Showcase](screenshots/liq/screenshot-236.png)
+![LIQ Welcome Interface](<screenshots/liq/Screenshot (236).png>)
 
-#### Launch & Role Navigation
-The primary entry point where users initiate their session and proceed through role authentication.
+#### Portal Launch Screen
+Primary starting screen routing users into role authentication.
 
-![LIQ Portal Launch Screen](screenshots/liq/screenshot-237.png)
+![LIQ Portal Launch Screen](<screenshots/liq/Screenshot (237).png>)
 
 ---
 
 ### 1. Parent Portal
 
-The **Parent Portal** gives parents and guardians direct, continuous visibility into their child's academic health without having to wait for end-of-term meetings.
+The **Parent Portal** provides families with direct visibility into their child's academic progress throughout the academic year.
 
-#### Key Implemented Features:
-* **Academic Summary Cards:** Displays overall cumulative average, highest-performing subject, weakest subject, and current quarter status.
+#### Implemented Features:
+* **Academic Summary Cards:** Cumulative overall average, highest-performing subject, areas requiring attention, and quarter completion status.
 * **Continuous Component Score Trends:** Longitudinal line charts tracking progress across all five individual continuous assessment components (Worksheet, Test, Assignment, Mid Exam, Final Exam).
-* **Quarterly Subject Standings & Distribution:** Visual breakdowns of performance across individual subjects with mastery distribution charts.
-* **Teacher Notes & Observations:** Direct access to feedback and guidance recorded by classroom instructors.
+* **Quarterly Subject Standings & Distribution:** Visual breakdowns of subject-level scores with mastery distribution donut charts.
+* **Teacher Notes & Observations:** Direct access to feedback and recommendations recorded by classroom teachers.
 
 #### Visual Showcase:
 
-![Parent Portal - Student Academic Profile & Multi-Quarter Component Trends](screenshots/parent/screenshot-238.png)
+![Parent Portal - Student Academic Profile & Multi-Quarter Component Trends](<screenshots/parent/Screenshot (238).png>)
 
-![Parent Portal - Executive Performance Summary & KPI Snapshot](screenshots/parent/screenshot-239.png)
+![Parent Portal - Executive Performance Summary & KPI Snapshot](<screenshots/parent/Screenshot (239).png>)
 
-![Parent Portal - Quarterly Subject Analytics & Performance Distribution](screenshots/parent/screenshot-240.png)
+![Parent Portal - Quarterly Subject Analytics & Performance Distribution](<screenshots/parent/Screenshot (240).png>)
 
 ---
 
 ### 2. Teacher Workspace & Markbook
 
-The **Teacher Workspace** provides classroom educators with a dedicated cockpit for markbook management, continuous assessment entry, attendance tracking, and student performance diagnostics.
+The **Teacher Workspace** provides classroom educators with a dedicated cockpit for grading, attendance, and student performance diagnostics.
 
-#### Key Implemented Features:
-* **Interactive 5-Component Markbook:** Live validation and grade capture for Worksheet (/10), Test (/10), Assignment (/10), Mid Exam (/30), and Final Exam (/40) with automated total summation.
-* **Class Overview & Metrics:** Instant visibility into overall section average, leading subject average, section attendance rate, and top-ranking student.
-* **Longitudinal Class Trends:** Interactive line plots tracking section average movement across Q1, Q2, Q3, and Q4.
+#### Implemented Features:
+* **Interactive 5-Component Markbook:** Live validation and grade capture for Worksheet (/10), Test (/10), Assignment (/10), Mid Exam (/30), and Final Exam (/40) with automatic summation.
+* **Class Overview & Metrics:** Instant visibility into overall class average, leading subject average, section attendance rate, and top-ranking student.
+* **Longitudinal Class Trends:** Line charts tracking class average movement across Q1, Q2, Q3, and Q4.
 * **Top Performer Recognition & Full Rankings:** Automated calculation of Top 5 student recognition snapshots for 1st Semester, 2nd Semester, and Full Year, alongside a sortable class-wide ranking table.
 
 #### Visual Showcase:
 
-![Teacher Workspace - Class KPI Command Header & Live Academic Tracking](screenshots/teacher/screenshot-242.png)
+![Teacher Workspace - Class KPI Command Header & Live Academic Tracking](<screenshots/teacher/Screenshot (242).png>)
 
-![Teacher Workspace - Class-Level Subject Averages & Longitudinal Trend Analytics](screenshots/teacher/screenshot-241.png)
+![Teacher Workspace - Class-Level Subject Averages & Longitudinal Trend Analytics](<screenshots/teacher/Screenshot (241).png>)
 
-![Teacher Workspace - Semester/Annual Top Performer Recognition & Class Rankings Table](screenshots/teacher/screenshot-243.png)
+![Teacher Workspace - Semester/Annual Top Performer Recognition & Class Rankings Table](<screenshots/teacher/Screenshot (243).png>)
 
 ---
 
 ### 3. School Administration Dashboard
 
-The **School Administration Dashboard** equips principals, vice principals, and department heads with school-wide academic monitoring across all sections and grades.
+The **School Administration Dashboard** equips school principals, vice principals, and department heads with school-wide monitoring across all sections and grades.
 
-#### Key Implemented Features:
+#### Implemented Features:
 * **School-Wide KPI Banner:** Real-time synthesis of School Overall Average, Pass Rate ($\ge 60\%$), Distinction Rate ($\ge 75\%$), and At-Risk Student Percentage ($<60\%$).
-* **Grade & Section Navigator:** Dedicated organization for Grades 9, 10, 11, and 12, with explicit track classification for Natural Science and Social Science streams.
+* **Grade & Section Navigator:** Dedicated views for Grades 9, 10, 11, and 12, with explicit classification for Natural Science and Social Science tracks.
 * **Cross-Section Comparative Analytics:** Side-by-side performance evaluation across class sections (e.g., 9A vs. 9B vs. 9C vs. 9D).
 * **Subject Performance Gap Analysis:** Highlights curriculum areas with significant variance between top-performing and struggling sections.
 
 #### Visual Showcase:
 
-![School Administration - Academic Stream & Grade Section Navigator](screenshots/admin/screenshot-244.png)
+![School Administration - Academic Stream & Grade Section Navigator](<screenshots/admin/Screenshot (244).png>)
 
-![School Administration - School-Wide Performance Overview & Institutional Metrics](screenshots/admin/screenshot-245.png)
+![School Administration - School-Wide Performance Overview & Institutional Metrics](<screenshots/admin/Screenshot (245).png>)
 
 ---
 
@@ -219,7 +219,7 @@ The **School Administration Dashboard** equips principals, vice principals, and 
 
 The **Wereda Dashboard** enables district education officers to supervise multiple schools within their jurisdiction, identifying institutional inequities and facilitating targeted support.
 
-#### Key Implemented Features:
+#### Implemented Features:
 * **Multi-School Institutional Grid:** Direct access to individual school profiles across the district (e.g., NEPS, Omega, Cruise, School of Tomorrow, BGIS, SOS, and others).
 * **Wereda Academic KPI Banner:** Aggregates district-wide averages, overall pass percentages, and distinction rates across all schools and grade levels.
 * **Wereda KPI Heatmap:** Color-coded matrix comparing Average Scores, Pass Rates, Distinction Rates, At-Risk Percentages, and Top Performer Rates across district units.
@@ -227,9 +227,9 @@ The **Wereda Dashboard** enables district education officers to supervise multip
 
 #### Visual Showcase:
 
-![Wereda Administration - Multi-School Directory & Aggregate KPI Command Center](screenshots/wereda/screenshot-246.png)
+![Wereda Administration - Multi-School Directory & Aggregate KPI Command Center](<screenshots/wereda/Screenshot (246).png>)
 
-![Wereda Analytics - Institutional KPI Heatmap & Multi-School Benchmark Matrix](screenshots/wereda/screenshot-247.png)
+![Wereda Analytics - Institutional KPI Heatmap & Multi-School Benchmark Matrix](<screenshots/wereda/Screenshot (247).png>)
 
 ---
 
@@ -237,21 +237,21 @@ The **Wereda Dashboard** enables district education officers to supervise multip
 
 The **Kifle Ketema Dashboard** provides regional educational supervisors with macro intelligence across all constituent Weredas in the subcity.
 
-#### Key Implemented Features:
-* **Regional Command Banner:** Displays combined average score, regional pass rate, distinction yield, at-risk percentage, top-performer rate, and quarter-over-quarter improvement ($\Delta \%$).
+#### Implemented Features:
+* **Regional Command Banner:** Combined average score, regional pass rate, distinction yield, at-risk percentage, top-performer rate, and quarter-over-quarter improvement ($\Delta \%$).
 * **Subcity Selector & Operational Matrix:** Quick navigation across administrative divisions with immediate status indicators.
 * **Pass Rate vs. At-Risk Cross-Analysis:** High-contrast comparative bar charts evaluating pass rates directly alongside at-risk student percentages per district.
 * **Subject-by-District Heatmap Matrix:** Visual matrix tracking subject-level competency (Mathematics, English, Amharic, Physics, Chemistry, Biology, Social Studies) across all subcity districts.
 
 #### Visual Showcase:
 
-![Subcity / Kifle Ketema Administration - Regional Intelligence Dashboard & Macro KPIs](screenshots/sub/screenshot-248.png)
+![Subcity / Kifle Ketema Administration - Regional Intelligence Dashboard & Macro KPIs](<screenshots/sub/Screenshot (248).png>)
 
-![Subcity / Kifle Ketema - Subcity Selector & Operational Status Monitoring](screenshots/sub/screenshot-249.png)
+![Subcity / Kifle Ketema - Subcity Selector & Operational Status Monitoring](<screenshots/sub/Screenshot (249).png>)
 
-![Subcity Comparative Analytics - Pass Rate vs. At-Risk Cross-Analysis by District](screenshots/sub/screenshot-250.png)
+![Subcity Comparative Analytics - Pass Rate vs. At-Risk Cross-Analysis by District](<screenshots/sub/Screenshot (250).png>)
 
-![Subcity Analytics - Subject-by-District Heatmap Matrix & District Benchmark Table](screenshots/sub/screenshot-251.png)
+![Subcity Analytics - Subject-by-District Heatmap Matrix & District Benchmark Table](<screenshots/sub/Screenshot (251).png>)
 
 ---
 
@@ -259,7 +259,7 @@ The **Kifle Ketema Dashboard** provides regional educational supervisors with ma
 
 The **Addis Ababa City Dashboard** serves as the executive intelligence center for municipal education bureau leaders, policy researchers, and government stakeholders.
 
-#### Key Implemented Features:
+#### Implemented Features:
 * **Capital-Wide Macro Analytics:** Aggregates metrics across all 11 Kifle Ketemas (Bole, Arada, Yeka, Kirkos, Lideta, Addis Ketema, Akaki Kality, Kolfe Keranio, Nifas Silk-Lafto, Gulele, Lemi Kura) and 99 constituent Weredas.
 * **Executive Priority Categorization:** Automated cards highlighting the **Top Performing Kifle Ketema** (e.g., *Nifas Silk-Lafto*) alongside areas that **Need Immediate Attention** (e.g., *Addis Ketema*).
 * **Cross-Kifle Ketema Ranking:** Standardized ranking of all 11 subcities by composite academic average and term improvement.
@@ -267,13 +267,13 @@ The **Addis Ababa City Dashboard** serves as the executive intelligence center f
 
 #### Visual Showcase:
 
-![Addis Ababa City Administration - Capital-Wide Educational Intelligence Command Center](screenshots/aa/screenshot-252.png)
+![Addis Ababa City Administration - Capital-Wide Educational Intelligence Command Center](<screenshots/aa/Screenshot (252).png>)
 
-![Addis Ababa Administration - Regional Performance Categorization & Priority Cards](screenshots/aa/screenshot-253.png)
+![Addis Ababa Administration - Regional Performance Categorization & Priority Cards](<screenshots/aa/Screenshot (253).png>)
 
-![Addis Ababa Analytics - Cross-Kifle Ketema Academic Rank & Pass/At-Risk Analysis](screenshots/aa/screenshot-254.png)
+![Addis Ababa Analytics - Cross-Kifle Ketema Academic Rank & Pass/At-Risk Analysis](<screenshots/aa/Screenshot (254).png>)
 
-![Addis Ababa Macro Matrix - City-Wide 11-Subcity Subject Heatmap & Comprehensive KPI Benchmark](screenshots/aa/screenshot-255.png)
+![Addis Ababa Macro Matrix - City-Wide 11-Subcity Subject Heatmap & Comprehensive KPI Benchmark](<screenshots/aa/Screenshot (255).png>)
 
 ---
 
@@ -297,7 +297,7 @@ $$	ext{Final Total} = \sum_{i=1}^{5} 	ext{Component}_i = 	ext{Worksheet}_{(0-10)
 ight) 	imes 100$$
 
 ### 3. Rule-Based Early Warning & Actionable Heuristics
-Rather than ungrounded black-box algorithms, LIQ implements transparent, rule-based diagnostic heuristics:
+Rather than ungrounded black-box models, LIQ implements transparent, rule-based diagnostic heuristics:
 
 | Classification | Threshold Rule | System Action |
 | :--- | :--- | :--- |
@@ -323,11 +323,11 @@ def get_prediction_trend(df: pd.DataFrame) -> str:
 
 ---
 
-## Comparative Matrix: Traditional Systems vs. LIQ
+## Traditional Systems vs. LIQ
 
 | Operational Dimension | Traditional Educational Monitoring | The LIQ Platform |
 | :--- | :--- | :--- |
-| **Data Capture** | Physical markbooks, manual paper ledgers, fragmented files | Centralized relational SQLite schema with relational integrity |
+| **Data Capture** | Physical markbooks, manual paper ledgers, fragmented files | Centralized relational SQLite schema with referential integrity |
 | **Reporting Cycle** | End-of-semester or end-of-year batch compilation | Immediate real-time metric computation upon grade entry |
 | **Data Scope** | Isolated per teacher or school office | Hierarchical roll-up: Student $
 ightarrow$ School $
@@ -484,7 +484,7 @@ LIQ/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/LIQ.git
+git clone <repository-url>
 cd LIQ
 ```
 
