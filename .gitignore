@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Build artifacts
+build/
+dist/
+*.spec.bak
+
+# Logs
+*.log
+
+# Tooling caches / local config
+.ruff_cache/
+.qoder/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets & local data (contains encryption key / student records)
+database/secret.key
+database/school_data.db

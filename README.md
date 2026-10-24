@@ -293,8 +293,7 @@ $$	ext{Final Total} = \sum_{i=1}^{5} 	ext{Component}_i = 	ext{Worksheet}_{(0-10)
   $$	ext{Gap}_{	ext{subject}} = \max(	ext{Mark}) - \min(	ext{Mark})$$
 * **Score Variance:** Statistical variance ($\sigma^2$) measuring learning homogeneity across a section.
 * **Quarter-over-Quarter Improvement Delta:** Percentage momentum between terms:
-  $$\Delta \% = \left(rac{\mu_{	ext{Term 2}} - \mu_{	ext{Term 1}}}{\mu_{	ext{Term 1}}}
-ight) 	imes 100$$
+  $$\Delta \% = \left(rac{\mu_{	ext{Term 2}} - \mu_{	ext{Term 1}}}{\mu_{	ext{Term 1}}}ight) 	imes 100$$
 
 ### 3. Rule-Based Early Warning & Actionable Heuristics
 Rather than ungrounded black-box models, LIQ implements transparent, rule-based diagnostic heuristics:
@@ -329,11 +328,7 @@ def get_prediction_trend(df: pd.DataFrame) -> str:
 | :--- | :--- | :--- |
 | **Data Capture** | Physical markbooks, manual paper ledgers, fragmented files | Centralized relational SQLite schema with referential integrity |
 | **Reporting Cycle** | End-of-semester or end-of-year batch compilation | Immediate real-time metric computation upon grade entry |
-| **Data Scope** | Isolated per teacher or school office | Hierarchical roll-up: Student $
-ightarrow$ School $
-ightarrow$ Wereda $
-ightarrow$ Subcity $
-ightarrow$ City |
+| **Data Scope** | Isolated per teacher or school office | Hierarchical roll-up: Student $ightarrow$ School $ightarrow$ Wereda $ightarrow$ Subcity $ightarrow$ City |
 | **Assessment Granularity** | Single summary percentage | 5-component breakdown (Worksheet, Test, Assignment, Mid, Final) |
 | **Analytical Depth** | Manual addition and basic averages | Statistical variance, score spread, quartile ranks, multi-level heatmaps |
 | **Early Warning** | Reactive; identified after examination failure | Proactive; automated at-risk flags and component trend tracking |
